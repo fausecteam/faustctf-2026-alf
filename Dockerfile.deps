@@ -1,0 +1,24 @@
+FROM debian:trixie-slim AS buildlib
+
+RUN apt update
+RUN apt install python3 pip build-essential bison flex gcc -y
+RUN pip install build setuptools --break-system-packages
+
+RUN mkdir /build
+COPY translate /build/translate
+WORKDIR /build/translate
+
+RUN make -C translate/c_src/
+RUN mv translate/c_src/libparser.so translate
+
+RUN python3 -m build
+
+
+FROM alpine
+
+RUN apk add --update --no-cache python3 py3-pip typst postgresql-client
+COPY requirements.txt .
+RUN pip install -r requirements.txt --break-system-packages
+COPY --from=buildlib /build/translate/dist /dependencies
+RUN pip install /dependencies/translate-3.2.1-py3-none-any.whl --break-system-packages
+RUN rm -fr /dependencies

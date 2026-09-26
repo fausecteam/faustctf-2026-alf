@@ -1,0 +1,23 @@
+# Human-readable name of the service
+name: alf
+# Name of the service for usage in paths, usernames etc.: Should only consist of lowercase alphanumeric
+# characters, must be identical to the (URL) project name of the GitLab repo
+slug: alf
+authors:
+  - schondavid <david.schoenberger@fau.de>
+
+install:
+  container_images:
+    - faust.cs.fau.de:5000/alf_deps
+    - faust.cs.fau.de:5000/alf
+    - docker.io/postgres:15-alpine
+
+checker:
+  script_path: checker/mychecker.py
+  # Upper bound of how long the Checker Script takes to run (for a single team)
+  # Used for scheduling checks within a tick, executions taking longer *may* get terminated
+  max_duration: 90
+  debian_packages:
+    - python3-requests
+  pip_packages: [pymupdf]
+

@@ -1,0 +1,5 @@
+FIRST_NAME = ["Eeliana", "Tk'tk", "Bo", "Aouialeu", "Grumbax", "Englebert", "Mwepani", "Xx", "Quetzalisoth", "Pip-pip", "Vore", "Wilhelmina", "Zk", "Oompharo", "N'deth", "Bartleby", "Aa'aa", "Throgmorten", "Wisp", "Glorbo"]
+MIDDLE_NAME = ["of-the-Ninth-Moon", "Zz", "Lula", "7", "Kr'akt", "Cuthbert", "Ub", "Aeiou", "Drakk", "the-Lesser", "Mim", "Xho", "Bloopwen", "Q", "Mortimer", "Ng", "Pocketful", "Oth-Oth", "Iridia", "Grub"]
+LAST_NAME = ["Starfeather", "Vor'Vor'Vth", "Mud", "Eleluianari", "Krunchk", "from-Sector-12", "Wobblethorn", "Ssss", "Olophonte", "Bzzt", "Pemberton-Vel", "Aaaaaa", "Nul", "Higginbotham", "Xqz", "Moonjuice", "Threnody-9", "Ip", "Snodgrass"]
+TITLE_PRE = ["Quantum", "Classified", "Forbidden", "Stellar", "Encrypted", "Ancient", "Provisional", "Restricted", "Galactic", "Anomalous", "Sacred", "Confidential", "Cosmic", "Emergency", "Subspace", "Redacted", "Eternal", "Preliminary"]
+TITLE_MAIN = ["Proposal", "Directive", "Manifesto", "Treaty", "Blueprint", "Decree", "Protocol", "Dossier", "Charter", "Memorandum", "Ledger", "Codex", "Mandate", "Petition", "Archive", "Schematic", "Accord", "Bulletin", "Inventory"]

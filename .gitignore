@@ -1,0 +1,4 @@
+venv/
+src/__pycache__/
+.flask_secret
+__pycache__/
